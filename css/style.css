@@ -59,7 +59,60 @@ body {
 }
 
 .episode_description {
-    max-width: 471.9px;
-    font-size: 14.85px;
+    max-width: 472px;
+    font-size: 15px;
     line-height: 150%;
+    margin-bottom: 20px;
 }
+
+.start_date_title {
+    font-size: 15px;
+    line-height: 150%;    
+    color: #B02000;
+    margin-bottom: 4px;
+}
+
+.start_date_description {
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 38px;
+}
+
+.play_button {
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 215px;
+    height: 54px;
+    background: linear-gradient(90deg, #FB641A 0%, #FC3309 100%);
+    border-radius: 248px;
+    border: none;
+    padding-right: 28px;
+    position: relative;
+}
+
+.play_button:after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    background: #fff url("../img/icon/play.png") center no-repeat;
+    border-radius: 50%;
+    right: -10px;
+    top: 0;
+  }
+
+
+.play_button:before {
+    content: "";
+    width: 65px;
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    right: -16px;
+    top: -6px;
+  }
+  
+  
