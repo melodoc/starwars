@@ -39,7 +39,13 @@ body {
 
 .nav_link {
     margin-right: 12px;
+    text-decoration: none; 
 }
+
+.nav_link:visited {
+    color: #B02000;
+}
+
 
 .episode_number {
     font-style: normal;
