@@ -11,7 +11,9 @@ body {
     background: #000000 url("../img/background/main-bg.png") no-repeat;
     background-attachment: fixed;
     background-position: 100% 50%;
-    background-size: contain;    
+    background-size: contain;
+    overflow-y: scroll; 
+   /* overflow: hidden; /* Скрыть на время*/
 }
 
 .container {
@@ -96,6 +98,7 @@ body {
     border: none;
     padding-right: 28px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .play_button:after {
@@ -121,4 +124,79 @@ body {
     top: -6px;
   }
   
-  
+  .episode_slider_title {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14.85px;
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+
+  .slider {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider_card  {
+    position: relative;
+    overflow: hidden;
+    width: 206.25px;
+    min-height: 165px;
+    box-shadow: 0px 8.25px 21.45px rgba(0, 0, 0, 0.25);
+    border-radius: 8.25px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    transition: all 0.2s;
+  }
+
+ .slider_card:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     z-index: -1;
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(0deg, rgba(80, 80, 80, 0.86), rgba(80, 80, 80, 0.86));
+ } 
+
+  .slider_card:hover {    
+    background: linear-gradient(0deg, rgba(64, 101, 255, 0.86), rgba(64, 101, 255, 0.86));
+  }
+
+
+  .content {
+    margin-left: 20px;
+  }
+
+  .slider_year {
+    padding-top: 24px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .slider_name {
+    padding-top: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14.85px;
+    line-height: 150%;
+    height: 66px;
+    margin-bottom: 9px;
+  }
+
+  .slider_rating {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 150%;
+  }
+
+  .slider_image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -2;
+  }
+
