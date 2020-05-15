@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ep04",
+    "year": 1977,
+    "rating": "8.11",
+    "name": "Эпизод IV:<br>Новая надежда",
+    "image": "img/card/card_4.png"
+  },
+  {
+    "id": "ep05",
+    "year": 1980,
+    "rating": "8.13",
+    "name": "Эпизод V:<br>Империя наносит ответный удар",
+    "image": "img/card/card_5.png"
+  },
+  {
+    "id": "ep06",
+    "year": 1983,
+    "rating": "8.15",
+    "name": "Эпизод VI:<br>Возвращение джедая",
+    "image": "img/card/card_6.png"
+  },
+  {
+    "id": "ep01",
+    "year": 1999,
+    "rating": "7.90",
+    "name": "Эпизод I:<br>Скрытая угроза",
+    "image": "img/card/card_1.png"
+  },
+  {
+    "id": "ep02",
+    "year": 2002,
+    "rating": "7.98",
+    "name": "Эпизод II:<br>Атака клонов",
+    "image": "img/card/card_2.png"
+  },
+  {
+    "id": "ep03",
+    "year": 2005,
+    "rating": "8.05",
+    "name": "Эпизод III:<br>Месть ситхов",
+    "image": "img/card/card_3.png"
+  },
+  {
+    "id": "ep07",
+    "year": 2015,
+    "rating": "7.10",
+    "name": "Эпизод VII:<br>Пробуждение силы",
+    "image": "img/card/card_7.png"
+  },
+  {
+    "id": "ep08",
+    "year": 2017,
+    "rating": "6.70",
+    "name": "Эпизод VIII: Последние джедаи",
+    "image": "img/card/card_8.png"
+  },
+  {
+    "id": "ep09",
+    "year": 2019,
+    "rating": "6.07",
+    "name": "Эпизод IX:<br>Скайуокер. Восход",
+    "image": "img/card/card_9.png"
+  }
+]

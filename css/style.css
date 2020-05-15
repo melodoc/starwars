@@ -8,11 +8,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
-    background: #000000 url("../img/background/main-bg.png") no-repeat;
+    background: #010101 url("../img/background/main-bg.png") no-repeat;
     background-attachment: fixed;
     background-position: 100% 50%;
     background-size: contain;
-    overflow-y: scroll; 
    /* overflow: hidden; /* Скрыть на время*/
 }
 
@@ -188,6 +187,9 @@ body {
   }
 
   .slider_rating {
+    background-image: url("../img/icon/rating.svg");
+    background-repeat: no-repeat;
+    background-position: 27px -1px;   
     font-weight: normal;
     font-size: 11px;
     line-height: 150%;
