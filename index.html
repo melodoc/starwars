@@ -8,32 +8,43 @@
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
+
   <body>
-    <!-- Top menu -->
+
     <div class="container">
-      <section class="top_menu">
-		  		<img src="img/icon/logo.png" alt="Logo" class="logo header_logo">
-					<nav class="navigation">
-            <a href="#" class="nav_link">Билеты</a>
-            <a href="#" class="nav_link">О фильме</a>
-            <a href="#" class="nav_link">Трейлеры</a>
-            <a href="#" class="nav_link">Обратная связь</a>
+
+      <header class="menu">
+		  		<img src="img/icon/logo.png" alt="Logo" class="menu__header-logo">
+					<nav class="menu__nav">
+            <a href="#" class="menu__link">Билеты</a>
+            <a href="#" class="menu__link">О фильме</a>
+            <a href="#" class="menu__link">Трейлеры</a>
+            <a href="#" class="menu__link">Обратная связь</a>
 					</nav>
+      </header>
+
+      <section class="episode">
+        <h1 class="episode__number">Эпизод IX</h1>
+        <h2 class="episode__title">Скайуокер. Восход</h2>
+        <div class="episode__description">Фильм завершает невероятную историю семьи Скайуокеров, длящуюся уже более сорока лет, и обещает дать ответы на все загадки из предыдущих серий. Зрителя ожидают старые и новые герои, уникальные миры, увлекательные путешествия на край Галактики и грандиозный финал фантастической саги</div>
       </section>
-      <section class="movie_info">
-        <h1 class="episode_number">Эпизод IX</h1>
-        <h2 class="episode_title">Скайуокер. Восход</h2>
-        <div class="episode_description">Фильм завершает невероятную историю семьи Скайуокеров, длящуюся уже более сорока лет, и обещает дать ответы на все загадки из предыдущих серий. Зрителя ожидают старые и новые герои, уникальные миры, увлекательные путешествия на край Галактики и грандиозный финал фантастической саги</div>
-        <div class="start_date_title">Премьера</div>
-        <div class="start_date_description">19 декабря 2019</div>
-        <button class="play_button" data-target="https://www.youtube.com/watch?v=KVRBfWQgyuY">Смотреть трейлер</button>
-      </section>
-      <div class="episode_slider_title">Предыдущие эпизоды</div>
-      <section class="slider">
-      </section>
-      <nav class="slider_nav">туда сюда</nav>
+
+      <article class="date">
+        <div class="date__title">Премьера</div>
+        <div class="date__description">19 декабря 2019</div>
+       </article>
+       
+      <article class="trailer">
+        <a class="trailer__button" href="https://www.youtube.com/watch?v=KVRBfWQgyuY"> Смотреть трейлер </a>
+      </article>
+
+      <article class="slider">
+        <div class="slider__title">Предыдущие эпизоды</div>
+        <nav class="slider__card"></nav>
+        <div class="slider__nav">туда сюда</div>
+      </article>
+
     </div>
-  <!-- EO Top menu -->
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

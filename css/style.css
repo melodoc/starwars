@@ -22,33 +22,32 @@ body {
     max-width: 1060px;
 }
 
-.header_logo {
-    margin-right: 59px;
-}
-
-
-.top_menu {
+.menu {
     display: flex;
     align-items: center;
     margin-bottom: 64px;
 }
 
-.navigation {
+.menu__header-logo {
+     margin-right: 59px;
+}
+
+.menu__nav {
     font-size: 16px;
     line-height: 150%;
 }
 
-.nav_link {
+.menu__link {
     margin-right: 12px;
     text-decoration: none; 
 }
 
-.nav_link:visited {
+.menu__link:visited {
     color: #B02000;
 }
 
 
-.episode_number {
+.episode__number {
     font-style: normal;
     font-weight: 900;
     font-size: 35px;
@@ -57,7 +56,7 @@ body {
 
 }
 
-.episode_title {
+.episode__title {
     font-style: normal;
     font-weight: 900;
     font-size: 53px;
@@ -65,27 +64,35 @@ body {
     margin-bottom: 20px;
 }
 
-.episode_description {
+.episode__description {
     max-width: 472px;
     font-size: 15px;
     line-height: 150%;
     margin-bottom: 20px;
 }
 
-.start_date_title {
+.date {
+  margin-bottom: 38px;
+}
+
+.date__title {
     font-size: 15px;
     line-height: 150%;    
     color: #B02000;
     margin-bottom: 4px;
 }
 
-.start_date_description {
+.date__description {
     font-size: 20px;
     line-height: 150%;
     margin-bottom: 44px;
 }
 
-.play_button {
+.trailer {
+  margin-bottom: 49px;
+}
+
+.trailer__button {
     position: relative;
     font-size: 14px;
     line-height: 16px;
@@ -101,7 +108,7 @@ body {
     padding-right: 80px;
   }
 
-.play_button:after {
+.trailer__button:after {
     content: "";
     position: absolute;
     width: 65px;
@@ -113,7 +120,7 @@ body {
   }
 
 
-.play_button:before {
+.trailer__button:before {
     content: "";
     position: absolute;
     width: 81px;
@@ -124,7 +131,7 @@ body {
     top: -8px;
   }
   
-  .episode_slider_title {
+  .slider__title {
     color: #FFFFFF;
     font-weight: bold;
     font-size: 14.85px;
@@ -133,12 +140,12 @@ body {
     margin-top: 40px;
   }
 
-  .slider {
+  .slider__card {
     display: flex;
     flex-wrap: wrap;
 }
 
-.slider_card  {
+.slider__card-item  {
     position: relative;
     overflow: hidden;
     width: 206.25px;
@@ -150,7 +157,7 @@ body {
     transition: all 0.2s;
   }
 
- .slider_card:before {
+ .slider__card-item:before {
      content: "";
      position: absolute;
      left: 0;
@@ -162,7 +169,7 @@ body {
      background: linear-gradient(0deg, rgba(80, 80, 80, 0.86), rgba(80, 80, 80, 0.86));
  } 
 
-  .slider_card:hover {    
+  .slider__card-item:hover {    
     background: linear-gradient(0deg, rgba(64, 101, 255, 0.86), rgba(64, 101, 255, 0.86));
   }
 
@@ -171,14 +178,14 @@ body {
     margin-left: 20px;
   }
 
-  .slider_year {
+  .slider__card-year {
     padding-top: 24px;
     font-weight: normal;
     font-size: 14px;
     line-height: 150%;
   }
 
-  .slider_name {
+  .slider__card-name {
     padding-top: 4px;
     font-style: normal;
     font-weight: 700;
@@ -188,7 +195,7 @@ body {
     margin-bottom: 9px;
   }
 
-  .slider_rating {
+  .slider__card-rating {
     background-image: url("../img/icon/rating.svg");
     background-repeat: no-repeat;
     background-position: 27px -1px;   
@@ -197,7 +204,7 @@ body {
     line-height: 150%;
   }
 
-  .slider_image {
+  .slider__card_image {
       position: absolute;
       left: 0;
       top: 0;

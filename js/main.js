@@ -1,6 +1,6 @@
 'use strict';
 
-const cardsepisodes = document.querySelector('.slider');
+const cardsepisodes = document.querySelector('.slider__card');
 
 const getData = async function(url) {
 
@@ -27,11 +27,11 @@ function createCardEpisode (episode) {
  card.info = [year, rating, name, image]
 
  card.insertAdjacentHTML ('beforeend', `
-        <div class="slider_card">
-             <img src="${image}" alt="" class="slider_image">
-             <div class="slider_year content">${year}</div>
-             <div class="slider_name content">${name}</div>
-             <div class="slider_rating content">${rating}</div>
+        <div class="slider__card-item">
+             <img src="${image}" alt="" class="slider__card_image">
+             <div class="slider__card-year content">${year}</div>
+             <div class="slider__card-name content">${name}</div>
+             <div class="slider__card-rating content">${rating}</div>
          </div>
  `);
  cardsepisodes.insertAdjacentElement('beforeend', card);
