@@ -65,7 +65,7 @@ body {
   font-size: 15px;
   line-height: 150%;
   margin-bottom: 20px;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 
 .date {
@@ -207,9 +207,31 @@ body {
   line-height: 150%;
 }
 
-.slider__card_image {
+.slider__card-image {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -2;
+}
+
+
+.slider__arrow {
+  display: flex;
+  justify-content: left;
+}
+
+.slider__arrow-left {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.6;
+  background: url("/img/icon/left-arrow.svg") no-repeat;
+}
+
+.slider__arrow-right {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.6;
+  background: url("/img/icon/right-arrow.svg") no-repeat;
 }
