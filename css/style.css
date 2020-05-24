@@ -146,7 +146,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
-  
+
   background: linear-gradient(90deg, #fb641a 0%, #fc3309 100%);
   border: none;
   border-radius: 248px;
@@ -200,7 +200,7 @@ body {
   width: 206.25px;
   min-height: 165px;
   margin-bottom: 20px;
-  
+
   box-shadow: 0px 8.25px 21.45px rgba(0, 0, 0, 0.25);
   border-radius: 8.25px;
 
@@ -222,10 +222,10 @@ body {
     0deg,
     rgba(80, 80, 80, 0.86),
     rgba(80, 80, 80, 0.86)
-    );
+  );
 
   content: "";
-  }
+}
 
 .slider__card-item:hover {
   background: linear-gradient(
@@ -243,7 +243,7 @@ body {
 .slider__card-year {
   display: block;
   padding-top: 24px;
-  
+
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
@@ -254,7 +254,7 @@ body {
   margin-bottom: 12px;
   padding-top: 4px;
   height: 66px;
-  
+
   font-style: normal;
   font-weight: 700;
   font-size: 14.85px;
@@ -304,7 +304,7 @@ body {
   background: transparent url("../img/icon/right-arrow.svg") no-repeat;
   border: none;
   opacity: 0.6;
-  
+
   cursor: pointer;
 }
 
@@ -320,6 +320,10 @@ body {
 }
 
 @media (max-width: 900px) {
+  .container {
+    max-width: 80%;
+  }
+  
   .episode__number {
     margin-bottom: 10px;
 
@@ -328,8 +332,19 @@ body {
 
   .episode__title {
     margin: 20px 0 15px;
-    
+
     font-size: 35px;
     line-height: 35px;
+  }
+
+  .menu__header-logo {
+    margin-right: 10px;
+  }
+
+  .menu__nav {
+    display: grid;
+    margin-right: 0x;
+
+    font-size: 14px;
   }
 }
