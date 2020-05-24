@@ -1,17 +1,52 @@
-*,
-*:after,
-*:before {
+/*set default values*/
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+nav,footer,header,aside{display: block;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none; padding-inline-start: 0;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   color: #ffffff;
   background: #010101 url("../img/background/main-bg.png") top right no-repeat;
   background-attachment: fixed;
   background-size: contain;
-  /* overflow: hidden; /* Скрыть на время*/
+  /* overflow: hidden; /* temporary hide*/
 }
+
+/*hidden elements style*/
+
+.hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  
+  overflow: hidden;
+}
+/*--------------------*/
 
 .container {
   padding: 91px 0 111px 0;
@@ -33,6 +68,8 @@ body {
 .menu__nav {
   font-size: 16px;
   line-height: 150%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .menu__link {
@@ -49,7 +86,7 @@ body {
   font-weight: 900;
   font-size: 35px;
   line-height: 100%;
-  margin-bottom: -35px;
+  margin-bottom: 10px;
 }
 
 .episode__title {
@@ -69,24 +106,24 @@ body {
 }
 
 .date {
-  margin-bottom: 38px;
+  margin-bottom: 50px;
 }
 
 .date__title {
+  display: block;
   font-size: 15px;
   line-height: 150%;
   color: #b02000;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .date__description {
   font-size: 20px;
   line-height: 150%;
-  margin-bottom: 44px;
 }
 
 .trailer {
-  margin-bottom: 49px;
+  padding-bottom: 50px;
 }
 
 .trailer__button {
@@ -133,7 +170,6 @@ body {
   font-size: 14.85px;
   line-height: 150%;
   margin-bottom: 20px;
-  margin-top: 40px;
 }
 
 .slider__card {
@@ -178,23 +214,26 @@ body {
 
 .content {
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .slider__card-year {
   padding-top: 24px;
+  display: block;
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
 }
 
 .slider__card-name {
+  margin-block-start: 0;
   padding-top: 4px;
   font-style: normal;
   font-weight: 700;
   font-size: 14.85px;
-  line-height: 150%;
+  line-height: 140%;
   height: 66px;
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 }
 
 .slider__card-rating {
@@ -204,6 +243,7 @@ body {
   font-weight: normal;
   font-size: 11px;
   line-height: 150%;
+  margin-block-start: 0;
 }
 
 .slider__card-image {
@@ -225,7 +265,6 @@ body {
   cursor: pointer;
   opacity: 0.6;
   background: transparent url("/img/icon/left-arrow.svg") no-repeat;
-  outline: none;
   margin-right: 15px;
 }
 
@@ -236,7 +275,6 @@ body {
   cursor: pointer;
   opacity: 0.6;
   background: transparent url("/img/icon/right-arrow.svg") no-repeat;
-  outline: none;
 }
 
 .slider__arrow-left span,
@@ -255,7 +293,7 @@ body {
     font-size: 30px;
     margin-bottom: 10px;
   }
-  
+
   .episode__title {
     font-size: 35px;
     line-height: 35px;

@@ -15,122 +15,185 @@
 
   <body>
     <div class="container">
-      <header class="menu">
-        <img src="img/icon/logo.png" alt="Logo" class="menu__header-logo" />
-        <nav class="menu__nav">
-          <a href="#" class="menu__link">Билеты</a>
-          <a href="#" class="menu__link">О фильме</a>
-          <a href="#" class="menu__link">Трейлеры</a>
-          <a href="#" class="menu__link">Обратная связь</a>
+      <header>
+        <nav class="menu">
+          <a>
+            <img
+              src="img/icon/logo.png"
+              alt="Логотип киноэпопеи «Звездные войны»"
+              class="menu__header-logo"
+            />
+          </a>
+          <ul class="menu__nav">
+            <li><a href="#" class="menu__link">Билеты</a></li>
+            <li><a href="#" class="menu__link">О фильме</a></li>
+            <li><a href="#" class="menu__link">Трейлеры</a></li>
+            <li><a href="#" class="menu__link">Обратная связь</a></li>
+          </ul>
         </nav>
       </header>
 
-      <section class="episode">
-        <h1 class="episode__number">Эпизод IX</h1>
-        <h2 class="episode__title">Скайуокер. Восход</h2>
-        <div class="episode__description">
-          Фильм завершает невероятную историю семьи Скайуокеров, длящуюся уже
-          более сорока лет, и обещает дать ответы на все загадки из предыдущих
-          серий. Зрителя ожидают старые и новые герои, уникальные миры,
-          увлекательные путешествия на край Галактики и грандиозный финал
-          фантастической саги
-        </div>
-      </section>
+      <main>
+        <h1 class="hidden">Киноэпопея «Звездные войны»</h1>
+        <section class="episode">
+          <h2 class="episode__number">Эпизод IX</h2>
+          <p class="episode__title">Скайуокер. Восход</p>
+          <p class="episode__description">
+            Фильм завершает невероятную историю семьи Скайуокеров, длящуюся уже
+            более сорока лет, и обещает дать ответы на все загадки из предыдущих
+            серий. Зрителя ожидают старые и новые герои, уникальные миры,
+            увлекательные путешествия на край Галактики и грандиозный финал
+            фантастической саги
+          </p>
+        </section>
 
-      <article class="date">
-        <div class="date__title">Премьера</div>
-        <div class="date__description">19 декабря 2019</div>
-      </article>
+        <section class="date">
+          <h2 class="date__title">Премьера</h2>
+          <p class="date__description">19 декабря 2019</p>
+        </section>
 
-      <article class="trailer">
-        <a
-          href="https://www.youtube.com/watch?v=KVRBfWQgyuY"
-          data-fancybox
-          class="trailer__button"
-        >
-          Смотреть трейлер
-        </a>
-      </article>
+        <section class="trailer">
+          <a
+            href="https://www.youtube.com/watch?v=KVRBfWQgyuY"
+            data-fancybox
+            class="trailer__button"
+          >
+            Смотреть трейлер
+          </a>
+        </section>
 
-      <div class="slider__title">Предыдущие эпизоды</div>
-      <div class="slider">
-        <div class="slider__card owl-carousel">
-      <!-- Here is the temporary solution. All the HTML must be erased after fixing carousel issue -->
-      <div class="slider__card-item">
-        <img src="img/card/card_4.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">1977</div>
-        <div class="slider__card-name content">
-          Эпизод IV:<br />Новая надежда
-        </div>
-        <div class="slider__card-rating content">8.11</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_5.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">1980</div>
-        <div class="slider__card-name content">
-          Эпизод V:<br />Империя наносит ответный удар
-        </div>
-        <div class="slider__card-rating content">8.13</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_6.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">1983</div>
-        <div class="slider__card-name content">
-          Эпизод VI:<br />Возвращение джедая
-        </div>
-        <div class="slider__card-rating content">8.15</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_1.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">1999</div>
-        <div class="slider__card-name content">
-          Эпизод I:<br />Скрытая угроза
-        </div>
-        <div class="slider__card-rating content">7.90</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_2.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">2002</div>
-        <div class="slider__card-name content">
-          Эпизод II:<br />Атака клонов
-        </div>
-        <div class="slider__card-rating content">7.98</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_3.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">2005</div>
-        <div class="slider__card-name content">
-          Эпизод III:<br />Месть ситхов
-        </div>
-        <div class="slider__card-rating content">8.05</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_7.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">2015</div>
-        <div class="slider__card-name content">
-          Эпизод VII:<br />Пробуждение силы
-        </div>
-        <div class="slider__card-rating content">7.10</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_8.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">2017</div>
-        <div class="slider__card-name content">
-          Эпизод VIII: Последние джедаи
-        </div>
-        <div class="slider__card-rating content">6.70</div>
-      </div>
-      <div class="slider__card-item">
-        <img src="img/card/card_9.png" alt="" class="slider__card-image" />
-        <div class="slider__card-year content">2019</div>
-        <div class="slider__card-name content">
-          Эпизод IX:<br />Скайуокер. Восход
-        </div>
-        <div class="slider__card-rating content">6.07</div>
-      </div>
-      <!-- The end of temporary solution-->
-        </div>
-      </div>
+        <h2 class="slider__title">Предыдущие эпизоды</h2>
+        <article class="slider__card owl-carousel">
+          <!-- Here is the temporary solution. All the HTML must be erased after fixing carousel issue -->
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_4.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="1977">1977</time>
+            <p class="slider__card-name content">
+              Эпизод IV:<br />Новая надежда
+            </p>
+            <p class="slider__card-rating content">8.11</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_5.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="1980">1980</time>
+            <p class="slider__card-name content">
+              Эпизод V:<br />Империя наносит ответный удар
+            </p>
+            <p class="slider__card-rating content">8.13</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_6.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="1983">1983</time>
+            <p class="slider__card-name content">
+              Эпизод VI:<br />Возвращение джедая
+            </p>
+            <p class="slider__card-rating content">8.15</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_1.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="1999">1999</time>
+            <p class="slider__card-name content">
+              Эпизод I:<br />Скрытая угроза
+            </p>
+            <p class="slider__card-rating content">7.90</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_2.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="2002">2002</time>
+            <p class="slider__card-name content">
+              Эпизод II:<br />Атака клонов
+            </p>
+            <p class="slider__card-rating content">7.98</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_3.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="2005">2005</time>
+            <p class="slider__card-name content">
+              Эпизод III:<br />Месть ситхов
+            </p>
+            <p class="slider__card-rating content">8.05</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_7.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="2015">2015</time>
+            <p class="slider__card-name content">
+              Эпизод VII:<br />Пробуждение силы
+            </p>
+            <p class="slider__card-rating content">7.10</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_8.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="2017">2017</time>
+            <p class="slider__card-name content">
+              Эпизод VIII: Последние джедаи
+            </p>
+            <p class="slider__card-rating content">6.70</p>
+          </div>
+          <div class="slider__card-item">
+            <figure>
+              <img
+                src="img/card/card_9.png"
+                alt=""
+                class="slider__card-image"
+              />
+            </figure>
+            <time class="slider__card-year content" datetime="2019">2019</time>
+            <p class="slider__card-name content">
+              Эпизод IX:<br />Скайуокер. Восход
+            </p>
+            <p class="slider__card-rating content">6.07</p>
+          </div>
+          <!-- The end of temporary solution-->
+        </article>
+      </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <link
@@ -138,7 +201,7 @@
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-   <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/owl.js"></script>
   </body>
