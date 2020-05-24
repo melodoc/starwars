@@ -1,10 +1,12 @@
 /*set default values*/
-*{
+* {
   padding: 0;
   margin: 0;
   border: 0;
 }
-*,*:before,*:after{
+*,
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -49,15 +51,16 @@ body {
 /*--------------------*/
 
 .container {
-  padding: 91px 0 111px 0;
+  max-width: 875px;
   width: 80%;
   margin: auto;
-  max-width: 875px;
+  padding: 91px 0 111px 0;
 }
 
 .menu {
   display: flex;
   align-items: center;
+  
   margin-bottom: 64px;
 }
 
@@ -66,14 +69,16 @@ body {
 }
 
 .menu__nav {
-  font-size: 16px;
-  line-height: 150%;
   display: flex;
   justify-content: flex-start;
+
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .menu__link {
   margin-right: 12px;
+
   text-decoration: none;
 }
 
@@ -82,26 +87,27 @@ body {
 }
 
 .episode__number {
-  font-style: normal;
+  margin-bottom: 10px;
+
   font-weight: 900;
   font-size: 35px;
   line-height: 100%;
-  margin-bottom: 10px;
 }
 
 .episode__title {
-  font-style: normal;
+  margin-bottom: 20px;
+
   font-weight: 900;
   font-size: 53px;
   line-height: 64px;
-  margin-bottom: 20px;
 }
 
 .episode__description {
   max-width: 472px;
+  margin-bottom: 20px;
+
   font-size: 15px;
   line-height: 150%;
-  margin-bottom: 20px;
   color: #afafaf;
 }
 
@@ -111,10 +117,11 @@ body {
 
 .date__title {
   display: block;
+  margin-bottom: 5px;
+
   font-size: 15px;
   line-height: 150%;
   color: #b02000;
-  margin-bottom: 5px;
 }
 
 .date__description {
@@ -128,48 +135,58 @@ body {
 
 .trailer__button {
   position: relative;
+
+  width: 215px;
+  height: 54px;
+  padding: 25px 34px;
+  padding-right: 80px;
+
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
-  width: 215px;
-  height: 54px;
+  
   background: linear-gradient(90deg, #fb641a 0%, #fc3309 100%);
-  border-radius: 248px;
   border: none;
-  padding: 25px 34px;
-  padding-right: 80px;
+  border-radius: 248px;
 }
 
 .trailer__button:after {
-  content: "";
   position: absolute;
+  top: 0;
+  right: 0;
+
   width: 65px;
   height: 65px;
+
   background: #fff url("../img/icon/play.png") center no-repeat;
   border-radius: 50%;
-  right: 0;
-  top: 0;
+
+  content: "";
 }
 
 .trailer__button:before {
-  content: "";
   position: absolute;
+  top: -8px;
+  right: -8px;
+
   width: 81px;
   height: 81px;
+
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  right: -8px;
-  top: -8px;
+
+  content: "";
 }
 
 .slider__title {
-  color: #ffffff;
-  font-weight: bold;
+  margin-bottom: 20px;
+
   font-size: 14.85px;
   line-height: 150%;
-  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .slider__card {
@@ -179,30 +196,36 @@ body {
 
 .slider__card-item {
   position: relative;
-  overflow: hidden;
+
   width: 206.25px;
   min-height: 165px;
+  margin-bottom: 20px;
+  
   box-shadow: 0px 8.25px 21.45px rgba(0, 0, 0, 0.25);
   border-radius: 8.25px;
-  margin-bottom: 20px;
+
   transition: all 0.2s;
+  overflow: hidden;
 }
 
 .slider__card-item:before {
-  content: "";
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: -1;
+
   display: block;
   width: 100%;
   height: 100%;
+
   background: linear-gradient(
     0deg,
     rgba(80, 80, 80, 0.86),
     rgba(80, 80, 80, 0.86)
-  );
-}
+    );
+
+  content: "";
+  }
 
 .slider__card-item:hover {
   background: linear-gradient(
@@ -218,8 +241,9 @@ body {
 }
 
 .slider__card-year {
-  padding-top: 24px;
   display: block;
+  padding-top: 24px;
+  
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
@@ -227,29 +251,32 @@ body {
 
 .slider__card-name {
   margin-block-start: 0;
+  margin-bottom: 12px;
   padding-top: 4px;
+  height: 66px;
+  
   font-style: normal;
   font-weight: 700;
   font-size: 14.85px;
   line-height: 140%;
-  height: 66px;
-  margin-bottom: 12px;
 }
 
 .slider__card-rating {
-  background-image: url("../img/icon/rating.svg");
-  background-repeat: no-repeat;
-  background-position: 27px -1px;
+  margin-block-start: 0;
+
   font-weight: normal;
   font-size: 11px;
   line-height: 150%;
-  margin-block-start: 0;
+
+  background-position: 27px -1px;
+  background-image: url("../img/icon/rating.svg");
+  background-repeat: no-repeat;
 }
 
 .slider__card-image {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: -2;
 }
 
@@ -259,22 +286,26 @@ body {
 }
 
 .slider__arrow-left {
-  border: none;
   width: 32px;
   height: 32px;
-  cursor: pointer;
-  opacity: 0.6;
-  background: transparent url("/img/icon/left-arrow.svg") no-repeat;
   margin-right: 15px;
+
+  background: transparent url("../img/icon/left-arrow.svg") no-repeat;
+  border: none;
+  opacity: 0.6;
+
+  cursor: pointer;
 }
 
 .slider__arrow-right {
-  border: none;
   width: 32px;
   height: 32px;
-  cursor: pointer;
+  
+  background: transparent url("../img/icon/right-arrow.svg") no-repeat;
+  border: none;
   opacity: 0.6;
-  background: transparent url("/img/icon/right-arrow.svg") no-repeat;
+  
+  cursor: pointer;
 }
 
 .slider__arrow-left span,
@@ -290,13 +321,15 @@ body {
 
 @media (max-width: 900px) {
   .episode__number {
-    font-size: 30px;
     margin-bottom: 10px;
+
+    font-size: 30px;
   }
 
   .episode__title {
+    margin: 20px 0 15px;
+    
     font-size: 35px;
     line-height: 35px;
-    margin: 20px 0 15px;
   }
 }
