@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/starwars/static/css/main.a10edead.chunk.css",
-    "main.js": "/starwars/static/js/main.687b441b.chunk.js",
-    "main.js.map": "/starwars/static/js/main.687b441b.chunk.js.map",
-    "runtime-main.js": "/starwars/static/js/runtime-main.48952ded.js",
-    "runtime-main.js.map": "/starwars/static/js/runtime-main.48952ded.js.map",
-    "static/js/2.ad380455.chunk.js": "/starwars/static/js/2.ad380455.chunk.js",
-    "static/js/2.ad380455.chunk.js.map": "/starwars/static/js/2.ad380455.chunk.js.map",
-    "static/js/3.5ad083b5.chunk.js": "/starwars/static/js/3.5ad083b5.chunk.js",
-    "static/js/3.5ad083b5.chunk.js.map": "/starwars/static/js/3.5ad083b5.chunk.js.map",
+    "main.css": "/starwars/static/css/main.43d19362.chunk.css",
+    "main.js": "/starwars/static/js/main.67830842.chunk.js",
+    "main.js.map": "/starwars/static/js/main.67830842.chunk.js.map",
+    "runtime-main.js": "/starwars/static/js/runtime-main.a9216808.js",
+    "runtime-main.js.map": "/starwars/static/js/runtime-main.a9216808.js.map",
+    "static/js/2.152d1a64.chunk.js": "/starwars/static/js/2.152d1a64.chunk.js",
+    "static/js/2.152d1a64.chunk.js.map": "/starwars/static/js/2.152d1a64.chunk.js.map",
+    "static/js/3.ec235b81.chunk.js": "/starwars/static/js/3.ec235b81.chunk.js",
+    "static/js/3.ec235b81.chunk.js.map": "/starwars/static/js/3.ec235b81.chunk.js.map",
     "index.html": "/starwars/index.html",
-    "static/css/main.a10edead.chunk.css.map": "/starwars/static/css/main.a10edead.chunk.css.map",
-    "static/js/2.ad380455.chunk.js.LICENSE.txt": "/starwars/static/js/2.ad380455.chunk.js.LICENSE.txt",
-    "static/media/Main.css": "/starwars/static/media/right-arrow.a7d333f7.svg"
+    "static/css/main.43d19362.chunk.css.map": "/starwars/static/css/main.43d19362.chunk.css.map",
+    "static/js/2.152d1a64.chunk.js.LICENSE.txt": "/starwars/static/js/2.152d1a64.chunk.js.LICENSE.txt",
+    "static/media/controls.css": "/starwars/static/media/right-arrow.a7d333f7.svg",
+    "static/media/main.css": "/starwars/static/media/main-bg.52d85586.jpg",
+    "static/media/card.css": "/starwars/static/media/rating.fdb6a3d6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.48952ded.js",
-    "static/js/2.ad380455.chunk.js",
-    "static/css/main.a10edead.chunk.css",
-    "static/js/main.687b441b.chunk.js"
+    "static/js/runtime-main.a9216808.js",
+    "static/js/2.152d1a64.chunk.js",
+    "static/css/main.43d19362.chunk.css",
+    "static/js/main.67830842.chunk.js"
   ]
 }
