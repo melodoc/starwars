@@ -11,17 +11,17 @@ const getData = async function (url) {
 getData('./db/episodes.json');
 
 function createCardEpisode(episode) {
-    const cardsEpisodes = document.querySelector('.slider__card');
+    const cardsEpisodes = document.querySelector('.slider-card');
     const { year, rating, name, image } = episode;
     const card = document.createElement('div');
-    card.classList.add('slider__card-item');
+    card.classList.add('slider-card-item');
     card.info = [year, rating, name, image]
 
     card.insertAdjacentHTML('beforeend', `
-             <img src="${image}" alt="" class="slider__card-image">
-             <div class="slider__card-year content">${year}</div>
-             <div class="slider__card-name content">${name}</div>
-             <div class="slider__card-rating content">${rating}</div>
+             <img src="${image}" alt="" class="slider-card-image">
+             <div class="slider-card-year content">${year}</div>
+             <div class="slider-card-name content">${name}</div>
+             <div class="slider-card-rating content">${rating}</div>
  `);
     cardsEpisodes.insertAdjacentElement('beforeend', card);
 }

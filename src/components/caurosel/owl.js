@@ -3,7 +3,7 @@ $( document ).ready(function() {
 		loop:true,
 		margin:16,
 		nav:true,
-		navClass: ['slider__arrow-left', 'slider__arrow-right'],
+		navClass: ['slider-arrow-left', 'slider-arrow-right'],
 		responsive:{
 			0:{
 				items:1
