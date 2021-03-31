@@ -1,0 +1,9 @@
+.menu-header-logo {
+  margin-right: 59px;
+}
+
+@media (max-width: 900px) {
+  .menu-header-logo {
+    margin-right: 10px;
+  }
+}
