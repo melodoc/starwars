@@ -1,7 +1,7 @@
 import React from "react";
-import "./movie-date.css";
+import "./start-date.css";
 
-function MovieDate() {
+function StartDate() {
   return (
     <section className="date">
       <h2 className="date-title">Премьера</h2>
@@ -10,4 +10,4 @@ function MovieDate() {
   );
 }
 
-export default MovieDate;
+export default StartDate;
