@@ -9,10 +9,8 @@ function Main() {
   return (
     <div className="container">
       <Header />
-      <main>
-        <MovieInfo />
-        <MovieCards />
-      </main>
+      <MovieInfo />
+      <MovieCards />
     </div>
   );
 }
