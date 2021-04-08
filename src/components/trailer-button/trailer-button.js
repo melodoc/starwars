@@ -1,7 +1,7 @@
 import React from "react";
-import "./trailer.css";
+import "./trailer-button.css";
 
-function Trailer() {
+function TrailerButton() {
   return (
     <section className="trailer">
       <a
@@ -15,4 +15,4 @@ function Trailer() {
   );
 }
 
-export default Trailer;
+export default TrailerButton;

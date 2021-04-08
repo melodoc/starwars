@@ -1,4 +1,5 @@
 import React from "react";
+import logo from './../../assets/images/icons/logo.png'
 import "./logo.css";
 
 function Logo() {
@@ -6,7 +7,7 @@ function Logo() {
     <a href="index.html">
       <img
         className="menu-header-logo"
-        src="../../assets/images/icons/logo.svg"
+        src={logo}
         alt="Логотип киноэпопеи «Звездные войны»"
         width="135"
         height="40"
