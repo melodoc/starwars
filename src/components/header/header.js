@@ -1,9 +1,9 @@
 import React from "react";
 import "./header.css";
-import Menu from "./../menu/menu";
-import Logo from "./../logo/logo";
+import { Menu } from "./../menu/menu";
+import { Logo } from "./../logo/logo";
 
-function Header() {
+export const Header = () => {
   return (
     <header>
       <nav className="nav">
@@ -12,6 +12,4 @@ function Header() {
       </nav>
     </header>
   );
-}
-
-export default Header;
+};

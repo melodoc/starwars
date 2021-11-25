@@ -1,10 +1,6 @@
-import React from 'react';
-import Main from './components/main/main';
+import React from "react";
+import { Main } from "./pages/steps/main";
 
-function App() {
-  return (
-    <Main />
-  );
-}
-
-export default App;
+export const App = () => {
+  return <Main />;
+};

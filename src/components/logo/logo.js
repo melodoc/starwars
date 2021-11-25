@@ -2,7 +2,7 @@ import React from "react";
 import logo from './../../assets/images/icons/logo.png'
 import "./logo.css";
 
-function Logo() {
+export const  Logo= () => {
   return (
     <a href="index.html">
       <img
@@ -14,6 +14,4 @@ function Logo() {
       />
     </a>
   );
-}
-
-export default Logo;
+};

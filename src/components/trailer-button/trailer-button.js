@@ -1,7 +1,7 @@
 import React from "react";
 import "./trailer-button.css";
 
-function TrailerButton() {
+export const  TrailerButton= () => {
   return (
     <section className="trailer">
       <a
@@ -13,6 +13,4 @@ function TrailerButton() {
       </a>
     </section>
   );
-}
-
-export default TrailerButton;
+};

@@ -1,11 +1,11 @@
 import React from "react";
 import "./movie-cards.css";
 
-import SectionHeader from "./../section-header/section-header";
-import Card from "./../card/card";
-import Controls from "./../controls/controls";
+import { SectionHeader } from "./../section-header/section-header";
+import { Card } from "./../card/card";
+import { Controls } from "./../controls/controls";
 
-function MovieCards() {
+export const MovieCards = () => {
   return (
     <>
       <SectionHeader />
@@ -17,6 +17,4 @@ function MovieCards() {
       <Controls />
     </>
   );
-}
-
-export default MovieCards;
+};

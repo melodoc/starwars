@@ -1,7 +1,7 @@
 import React from "react";
 import "./movie-description.css";
 
-function MovieDescription() {
+export const  MovieDescription = () => {
   return (
     <section className="episode">
       <h1 className="episode-number">Эпизод IX</h1>
@@ -15,6 +15,4 @@ function MovieDescription() {
       </p>
     </section>
   );
-}
-
-export default MovieDescription;
+};
