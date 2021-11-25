@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.css";
 
-function Card() {
+export const Card = () => {
   return (
     <div className="slider-card-item">
       <figure>
@@ -25,5 +25,3 @@ function Card() {
     </div>
   );
 }
-
-export default Card;
