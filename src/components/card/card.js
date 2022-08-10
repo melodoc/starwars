@@ -1,27 +1,29 @@
-import React from "react";
-import "./card.css";
+import React from 'react';
 
-export const Card = () => {
+import './card.css';
+
+export const Card = ({ card, onClick }) => {
+  const { id, releaseDate, description, title, episode } = card;
+
+  const handleOnClick = () => {
+    onClick(id);
+  };
+
+  const descriptionClassName = `card-item ${!title ? 'card-background' : ''}`;
+
   return (
-    <div className="slider-card-item">
-      <figure>
-        <img
-          className="slider-card-image"
-          src="public/remote-assetscard_4.png"
-          alt=""
-          width="207"
-          height="166"
-        />
-      </figure>
-      <time className="slider-card-year content" datetime="1977">
-        1977
-      </time>
-      <p className="slider-card-name content">
-        Эпизод IV:
-        <br />
-        Новая надежда
-      </p>
-      <p className="slider-card-rating content">8.11</p>
+    <div className={descriptionClassName} onClick={handleOnClick}>
+      {releaseDate && (
+        <time className="card-year content" dateTime={releaseDate}>
+          {releaseDate}
+        </time>
+      )}
+      {title && (
+        <p className="card-name content">
+          {title}. Episode {episode}
+        </p>
+      )}
+      <p className="card-description content">{description}</p>
     </div>
   );
-}
+};
