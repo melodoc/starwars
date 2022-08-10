@@ -1,5 +1,6 @@
 import React from "react";
-import logo from './../../assets/images/icons/logo.png'
+import logo from './../../assets/images/icons/star-wars.svg';
+
 import "./logo.css";
 
 export const  Logo= () => {
@@ -8,9 +9,9 @@ export const  Logo= () => {
       <img
         className="menu-header-logo"
         src={logo}
-        alt="Логотип киноэпопеи «Звездные войны»"
+        alt="Star wars logo"
         width="135"
-        height="40"
+        height="58"
       />
     </a>
   );

@@ -1,7 +1,8 @@
-import React from "react";
-import "./header.css";
-import { Menu } from "./../menu/menu";
-import { Logo } from "./../logo/logo";
+import React from 'react';
+import { Menu } from '../menu/menu';
+import { Logo } from '../logo/logo';
+
+import './header.css';
 
 export const Header = () => {
   return (
