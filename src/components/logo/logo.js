@@ -5,7 +5,7 @@ import "./logo.css";
 
 export const  Logo= () => {
   return (
-    <a href="index.html">
+    <a href=".">
       <img
         className="menu-header-logo"
         src={logo}

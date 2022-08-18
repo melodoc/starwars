@@ -25,5 +25,5 @@ export const InfoPanel = ({ currentFilm }) => {
       </>
     );
   }
-  return (<h2 className="episode-select">Select episode</h2>)
+  return (<h2 className="episode-select">Select the episode</h2>)
 };

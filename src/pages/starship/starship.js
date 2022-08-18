@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 
 import { Card } from '../../components/card';
-import { DetailedCard } from '../../components/detailed-card';
+import { StarshipCard } from '../../components/starship-card';
 import { api } from '../../api';
-import { CardsEnum, DetailedCardEnum } from '../../constants';
+import { CardsEnum } from '../../constants';
 
-import './characters.css';
+import './starship.css';
 
-export const Characters = () => {
-  const [characters, setCharacters] = useState(null);
-  const [currentCharacter, setCurrentCharacter] = useState(null);
+export const Starship = () => {
+  const [starship, setStarship] = useState(null);
+  const [currentStarship, setCurrentStarship] = useState(null);
 
   useEffect(() => {
     api
-      .getCharactersList()
+      .getStarshipList()
       .then((data) => {
-        setCharacters(data.results);
+        setStarship(data.results);
       })
       .catch((err) => {
         console.error(err);
@@ -24,9 +24,9 @@ export const Characters = () => {
 
   const handleOnClick = (id) => {
     api
-      .getCharacterById(id)
+      .getStarshipById(id)
       .then((data) => {
-        setCurrentCharacter(data.result);
+        setCurrentStarship(data.result);
       })
       .catch((err) => {
         console.error(err);
@@ -35,13 +35,11 @@ export const Characters = () => {
 
   return (
     <>
-      <h2 className="episode-select">Characters</h2>
-      {currentCharacter && currentCharacter?.properties && (
-        <DetailedCard currentCardItem={currentCharacter?.properties} type={DetailedCardEnum.CHARACTERS} />
-      )}
-      <article className="characters">
-        {characters
-          ? characters.map((character) => {
+      <h2 className="episode-select">Starship</h2>
+      {currentStarship && <StarshipCard card={currentStarship.properties}/>}
+      <article className="starship">
+        {starship
+          ? starship.map((character) => {
               return (
                 <Card
                   key={character.uid}

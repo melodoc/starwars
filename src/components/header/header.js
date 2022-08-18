@@ -1,6 +1,6 @@
 import React from 'react';
-import { Menu } from '../menu/menu';
-import { Logo } from '../logo/logo';
+import { Menu } from '../menu';
+import { Logo } from '../logo';
 
 import './header.css';
 
