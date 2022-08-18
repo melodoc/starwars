@@ -37,7 +37,10 @@ export const Characters = () => {
     <>
       <h2 className="episode-select">Characters</h2>
       {currentCharacter && currentCharacter?.properties && (
-        <DetailedCard currentCardItem={currentCharacter?.properties} type={DetailedCardEnum.CHARACTERS} />
+        <DetailedCard
+          currentCardItem={currentCharacter?.properties}
+          type={DetailedCardEnum.CHARACTERS}
+        />
       )}
       <article className="characters">
         {characters

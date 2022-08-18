@@ -43,7 +43,11 @@ export const DetailedCard = ({ currentCardItem, type }) => {
         <table className="character-table">
           <tbody>
             {characters.map((character, index) => (
-              <TableRow key={`table_row_characters_${index}`} label={character.label} value={character.value} />
+              <TableRow
+                key={`table_row_characters_${index}`}
+                label={character.label}
+                value={character.value}
+              />
             ))}
           </tbody>
         </table>
@@ -56,7 +60,11 @@ export const DetailedCard = ({ currentCardItem, type }) => {
       <table className="character-table">
         <tbody>
           {planets.map((character, index) => (
-            <TableRow key={`table_row_planets_${index}`} label={character.label} value={character.value} />
+            <TableRow
+              key={`table_row_planets_${index}`}
+              label={character.label}
+              value={character.value}
+            />
           ))}
         </tbody>
       </table>
