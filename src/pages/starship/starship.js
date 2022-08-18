@@ -36,7 +36,7 @@ export const Starship = () => {
   return (
     <>
       <h2 className="episode-select">Starship</h2>
-      {currentStarship && <StarshipCard card={currentStarship.properties}/>}
+      {currentStarship && <StarshipCard card={currentStarship.properties} />}
       <article className="starship">
         {starship
           ? starship.map((character) => {

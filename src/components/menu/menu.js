@@ -9,7 +9,7 @@ export const Menu = () => {
     { name: 'About episodes', tab: TabsEnum.EPISODES },
     { name: 'Characters', tab: TabsEnum.CHARACTERS },
     { name: 'Starship', tab: TabsEnum.STARSHIP },
-    { name: 'Planets', tab: TabsEnum.PLANETS },
+    { name: 'Planets', tab: TabsEnum.PLANETS }
   ];
 
   const { currentTab, setCurrentTab } = useContext(CurrentTabContext);
@@ -20,14 +20,14 @@ export const Menu = () => {
   };
 
   return (
-      <ul className="menu-nav">
-        {links.map((link, index) => (
-          <li key={`${index}${link.tab}`}>
-            <a className="menu-link" href="." onClick={handleLinkClick} id={link.tab}>
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <ul className="menu-nav">
+      {links.map((link, index) => (
+        <li key={`${index}${link.tab}`}>
+          <a className="menu-link" href="." onClick={handleLinkClick} id={link.tab}>
+            {link.name}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };
