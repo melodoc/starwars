@@ -35,7 +35,7 @@
 
   font-size: 15px;
   line-height: 150%;
-  color: #afafaf;
+  color: #ffffff;
 }
 
 .date {
@@ -57,7 +57,7 @@
 }
 
 .info {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .info-title {
