@@ -5,17 +5,17 @@ import { DetailedCard } from '../../components/detailed-card';
 import { api } from '../../api';
 import { CardsEnum, DetailedCardEnum } from '../../constants';
 
-import './characters.css';
+import './planets.css';
 
-export const Characters = () => {
-  const [characters, setCharacters] = useState(null);
-  const [currentCharacter, setCurrentCharacter] = useState(null);
+export const Planets = () => {
+  const [planets, setPlanets] = useState(null);
+  const [currentPlanet, setCurrentPlanet] = useState(null);
 
   useEffect(() => {
     api
-      .getCharactersList()
+      .getPlanetList()
       .then((data) => {
-        setCharacters(data.results);
+        setPlanets(data.results);
       })
       .catch((err) => {
         console.error(err);
@@ -24,9 +24,9 @@ export const Characters = () => {
 
   const handleOnClick = (id) => {
     api
-      .getCharacterById(id)
+      .getPlanetById(id)
       .then((data) => {
-        setCurrentCharacter(data.result);
+        setCurrentPlanet(data.result);
       })
       .catch((err) => {
         console.error(err);
@@ -35,20 +35,20 @@ export const Characters = () => {
 
   return (
     <>
-      <h2 className="episode-select">Characters</h2>
-      {currentCharacter && currentCharacter?.properties && (
-        <DetailedCard currentCardItem={currentCharacter?.properties} type={DetailedCardEnum.CHARACTERS} />
+      <h2 className="episode-select">Planets</h2>
+      {currentPlanet && currentPlanet?.properties && (
+        <DetailedCard currentCardItem={currentPlanet?.properties} type={DetailedCardEnum.PLANETS} />
       )}
-      <article className="characters">
-        {characters
-          ? characters.map((character) => {
+      <article className="planets">
+        {planets
+          ? planets.map((planet) => {
               return (
                 <Card
-                  key={character.uid}
+                  key={planet.uid}
                   type={CardsEnum.CHARACTERS}
                   card={{
-                    id: character.uid,
-                    description: character.name
+                    id: planet.uid,
+                    description: planet.name
                   }}
                   onClick={handleOnClick}
                 />

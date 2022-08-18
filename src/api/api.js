@@ -1,6 +1,6 @@
 import { requestParams } from '../constants';
 
-export class Api {
+class Api {
   constructor({ baseUrl, headers }) {
     this.baseUrl = baseUrl;
     this.headers = headers;
@@ -34,12 +34,25 @@ export class Api {
     return this._fetchHandle(this._methods.GET, '/people');
   }
 
-//   setUserInfo(name, about) {
-//     return this._fetchHandle(this._methods.PATCH, '/users/me', {
-//       name,
-//       about
-//     });
-//   }
+  getCharacterById(id) {
+    return this._fetchHandle(this._methods.GET, `/people/${id}`);
+  }
+
+  getStarshipList() {
+    return this._fetchHandle(this._methods.GET, '/starships');
+  }
+
+  getStarshipById(id) {
+    return this._fetchHandle(this._methods.GET, `/starships/${id}`);
+  }
+
+  getPlanetList() {
+    return this._fetchHandle(this._methods.GET, '/planets');
+  }
+
+  getPlanetById(id) {
+    return this._fetchHandle(this._methods.GET, `/planets/${id}`);
+  }
 }
 
 export const api = new Api(requestParams);

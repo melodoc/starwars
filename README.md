@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [Deployed by github-pages.](https://melodoc.github.io/starwars/index.html)
 
+# API
+
+https://www.swapi.tech/documentation
+
 ## Available Scripts
 
 `npm start`

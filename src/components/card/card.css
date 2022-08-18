@@ -35,6 +35,8 @@
   background: linear-gradient(0deg,
       rgba(64, 101, 255, 0.86),
       rgba(64, 101, 255, 0.86));
+  transition: 0.5s ease-in-out;
+
 }
 
 .content {
@@ -72,6 +74,21 @@
   text-overflow: ellipsis;
 }
 
-.card-background {
-  background-image: url('../../assets/images/cards/card.jpg');
+.card-link {
+  color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  text-shadow: 0px 2px 4px rgba(67, 186, 255, 0.55);
+}
+
+.character {
+  font-weight: 500;
+  font-size: 18.57px;
+  line-height: 1.43;
+}
+
+.card-characters {
+  background: linear-gradient(115.33deg, rgba(209, 209, 209, 0.5) -8.48%, rgba(188, 188, 188, 0.05) 130.76%);
+  backdrop-filter: blur(10px);
 }
