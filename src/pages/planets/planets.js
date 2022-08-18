@@ -37,7 +37,10 @@ export const Planets = () => {
     <>
       <h2 className="episode-select">Planets</h2>
       {currentPlanet && currentPlanet?.properties && (
-        <DetailedCard currentCardItem={currentPlanet?.properties} type={DetailedCardEnum.PLANETS} />
+        <DetailedCard
+          currentCardItem={currentPlanet?.properties}
+          type={DetailedCardEnum.PLANETS}
+        />
       )}
       <article className="planets">
         {planets

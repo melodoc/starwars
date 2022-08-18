@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./info-panel.css";
+import './info-panel.css';
 
 export const InfoPanel = ({ currentFilm }) => {
   if (currentFilm) {
@@ -9,9 +9,7 @@ export const InfoPanel = ({ currentFilm }) => {
         <section className="episode">
           <h1 className="episode-number">Episode {currentFilm.properties.episode_id}</h1>
           <h2 className="episode-title">{currentFilm.properties.title}</h2>
-          <p className="episode-description">
-            {currentFilm.properties.opening_crawl}
-          </p>
+          <p className="episode-description">{currentFilm.properties.opening_crawl}</p>
         </section>
         <section className="date">
           <h2 className="date-title">Release date</h2>
@@ -25,5 +23,5 @@ export const InfoPanel = ({ currentFilm }) => {
       </>
     );
   }
-  return (<h2 className="episode-select">Select the episode</h2>)
+  return <h2 className="episode-select">Select the episode</h2>;
 };

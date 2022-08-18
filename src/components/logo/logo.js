@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import logo from './../../assets/images/icons/star-wars.svg';
 
-import "./logo.css";
+import './logo.css';
 
-export const  Logo= () => {
+export const Logo = () => {
   return (
     <a href=".">
       <img

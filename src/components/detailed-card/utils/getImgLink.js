@@ -14,7 +14,8 @@ const characterPicPath = {
 
 export const getImgLink = (characterItemName) => {
   const imageName =
-    characterPicPath[characterItemName] === '' || characterPicPath[characterItemName] === undefined
+    characterPicPath[characterItemName] === '' ||
+    characterPicPath[characterItemName] === undefined
       ? characterPicPath.default
       : characterPicPath[characterItemName];
   return require(`../../../assets/images/background/${imageName}`);
