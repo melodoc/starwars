@@ -12,6 +12,7 @@ export const Menu = () => {
     { name: 'Planets', tab: TabsEnum.PLANETS }
   ];
 
+  // eslint-disable-next-line no-unused-vars
   const { currentTab, setCurrentTab } = useContext(CurrentTabContext);
 
   const handleLinkClick = (e) => {
