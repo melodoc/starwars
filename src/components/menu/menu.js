@@ -1,29 +1,34 @@
-import React from "react";
-import "./menu.css";
+import React, { useContext } from 'react';
+import { TabsEnum } from '../../constants';
+import { CurrentTabContext } from '../../contexts';
 
-export const Menu= () => {
+import './menu.css';
+
+export const Menu = () => {
+  const links = [
+    { name: 'About episodes', tab: TabsEnum.EPISODES },
+    { name: 'Characters', tab: TabsEnum.CHARACTERS },
+    { name: 'Starship', tab: TabsEnum.STARSHIP },
+    { name: 'Planets', tab: TabsEnum.PLANETS }
+  ];
+
+  // eslint-disable-next-line no-unused-vars
+  const { currentTab, setCurrentTab } = useContext(CurrentTabContext);
+
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    setCurrentTab(e.target.id);
+  };
+
   return (
     <ul className="menu-nav">
-      <li>
-        <a className="menu-link" href="index.html">
-          Билеты
-        </a>
-      </li>
-      <li>
-        <a className="menu-link" href="index.html">
-          О фильме
-        </a>
-      </li>
-      <li>
-        <a className="menu-link" href="index.html">
-          Трейлеры
-        </a>
-      </li>
-      <li>
-        <a className="menu-link" href="index.html">
-          Обратная связь
-        </a>
-      </li>
+      {links.map((link, index) => (
+        <li key={`${index}${link.tab}`}>
+          <a className="menu-link" href="." onClick={handleLinkClick} id={link.tab}>
+            {link.name}
+          </a>
+        </li>
+      ))}
     </ul>
   );
 };
