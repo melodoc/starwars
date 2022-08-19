@@ -1,51 +1,27 @@
-import React, { useState } from 'react';
+import React from "react";
+import "./card.css";
 
-import { CardsEnum } from '../../constants';
-
-import './card.css';
-
-export const Card = ({ type, card, onClick }) => {
-  const { id, releaseDate, description, title, episode } = card;
-  const [detailsVisibility, setDetailsVisibility] = useState(false);
-
-  const handleOnClick = () => {
-    onClick(id);
-  };
-
-  const handleLinkClick = (e) => {
-    e.preventDefault();
-  };
-
-  const handleMouseEvent = () => {
-    setDetailsVisibility(!detailsVisibility);
-  };
-
-  return type === CardsEnum.MOVIE ? (
-    <div className="card-item" onClick={handleOnClick}>
-      <time className="card-year content" dateTime={releaseDate}>
-        {releaseDate}
+export const Card = () => {
+  return (
+    <div className="slider-card-item">
+      <figure>
+        <img
+          className="slider-card-image"
+          src="public/remote-assetscard_4.png"
+          alt=""
+          width="207"
+          height="166"
+        />
+      </figure>
+      <time className="slider-card-year content" datetime="1977">
+        1977
       </time>
-      <p className="card-name content">
-        {title}. Episode {episode}
+      <p className="slider-card-name content">
+        Эпизод IV:
+        <br />
+        Новая надежда
       </p>
-      <p className="card-description content">{description}</p>
-    </div>
-  ) : (
-    <div
-      className="card-item card-characters"
-      onClick={handleOnClick}
-      onMouseEnter={handleMouseEvent}
-      onMouseLeave={handleMouseEvent}
-    >
-      <time className="card-year content" dateTime={releaseDate}>
-        {releaseDate}
-      </time>
-      <p className="card-name character content">{description}</p>
-      {detailsVisibility && (
-        <a className="card-link content" href="." onClick={handleLinkClick}>
-          View details
-        </a>
-      )}
+      <p className="slider-card-rating content">8.11</p>
     </div>
   );
-};
+}

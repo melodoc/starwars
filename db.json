@@ -1,0 +1,112 @@
+{
+  "episodes": [
+    {
+      "id": "ep04",
+      "year": 1977,
+      "rating": "8.11",
+      "part": "Эпизод IV",
+      "name": "Новая надежда",
+      "description": "Описание",
+      "release": "19 декабря 1977",
+      "image": "img/card/card_4.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep05",
+      "year": 1980,
+      "rating": "8.13",
+      "part": "Эпизод V",
+      "name": "Империя наносит ответный удар",
+      "description": "Описание",
+      "release": "19 декабря 1980",
+      "image": "img/card/card_5.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep06",
+      "year": 1983,
+      "rating": "8.15",
+      "part": "Эпизод VI",
+      "name": "Возвращение джедая",
+      "description": "Описание",
+      "release": "19 декабря 1983",
+      "image": "img/card/card_6.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep01",
+      "year": 1999,
+      "rating": "7.90",
+      "part": "Эпизод I",
+      "name": "Скрытая угроза",
+      "description": "Описание",
+      "release": "19 декабря 1999",
+      "image": "img/card/card_1.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep02",
+      "year": 2002,
+      "rating": "7.98",
+      "part": "Эпизод II",
+      "name": "Атака клонов",
+      "description": "Описание",
+      "release": "19 декабря 2002",
+      "image": "img/card/card_2.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep03",
+      "year": 2005,
+      "rating": "8.05",
+      "part": "Эпизод III",
+      "name": "Месть ситхов",
+      "description": "Описание",
+      "release": "19 декабря 2005",
+      "image": "img/card/card_3.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep07",
+      "year": 2015,
+      "rating": "7.10",
+      "part": "Эпизод VII",
+      "name": "Пробуждение силы",
+      "description": "Описание",
+      "release": "19 декабря 2015",
+      "image": "img/card/card_7.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep08",
+      "year": 2017,
+      "rating": "6.70",
+      "part": "Эпизод VIII: Последние джедаи",
+      "description": "Описание",
+      "release": "19 декабря 2017",
+      "image": "img/card/card_8.png",
+      "trailer": "trailer.com"
+    },
+    {
+      "id": "ep09",
+      "year": 2019,
+      "rating": "6.07",
+      "part": "Эпизод IX",
+      "name": "Скайуокер. Восход",
+      "description": "Описание",
+      "release": "19 декабря 2019",
+      "image": "img/card/card_9.png",
+      "trailer": "trailer.com"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

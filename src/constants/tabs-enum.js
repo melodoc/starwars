@@ -1,6 +1,0 @@
-export const TabsEnum = {
-  EPISODES: 'EPISODES',
-  CHARACTERS: 'CHARACTERS',
-  STARSHIP: 'STARSHIP',
-  PLANETS: 'PLANETS'
-};

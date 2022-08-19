@@ -1,20 +1,24 @@
-.card-item {
+.slider-card-item {
   position: relative;
-  cursor: pointer;
 
   width: 206.25px;
   min-height: 165px;
   margin-right: 10px;
   margin-bottom: 15px;
 
+  -webkit-box-shadow: 0px 8.25px 21.45px rgba(0, 0, 0, 0.25);
+
   box-shadow: 0px 8.25px 21.45px rgba(0, 0, 0, 0.25);
   border-radius: 8.25px;
 
+  -webkit-transition: all 0.2s;
+
+  -o-transition: all 0.2s;
   transition: all 0.2s;
   overflow: hidden;
 }
 
-.card-item:before {
+.slider-card-item:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,14 +28,47 @@
   width: 100%;
   height: 100%;
 
-  background: linear-gradient(0deg, rgba(80, 80, 80, 0.86), rgba(80, 80, 80, 0.86));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(80, 80, 80, 0.86)),
+    to(rgba(80, 80, 80, 0.86))
+  );
 
-  content: '';
+  background: -o-linear-gradient(
+    bottom,
+    rgba(80, 80, 80, 0.86),
+    rgba(80, 80, 80, 0.86)
+  );
+
+  background: linear-gradient(
+    0deg,
+    rgba(80, 80, 80, 0.86),
+    rgba(80, 80, 80, 0.86)
+  );
+
+  content: "";
 }
 
-.card-item:hover {
-  background: linear-gradient(0deg, rgba(64, 101, 255, 0.86), rgba(64, 101, 255, 0.86));
-  transition: 0.5s ease-in-out;
+.slider-card-item:hover {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(64, 101, 255, 0.86)),
+    to(rgba(64, 101, 255, 0.86))
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgba(64, 101, 255, 0.86),
+    rgba(64, 101, 255, 0.86)
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(64, 101, 255, 0.86),
+    rgba(64, 101, 255, 0.86)
+  );
 }
 
 .content {
@@ -39,7 +76,7 @@
   margin-right: 20px;
 }
 
-.card-year {
+.slider-card-year {
   display: block;
   padding-top: 24px;
 
@@ -48,8 +85,10 @@
   line-height: 150%;
 }
 
-.card-name {
+.slider-card-name {
+  -webkit-margin-before: 0;
   margin-block-start: 0;
+  margin-bottom: 12px;
   padding-top: 4px;
   height: 66px;
 
@@ -59,35 +98,22 @@
   line-height: 140%;
 }
 
-.card-description {
+.slider-card-rating {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+
   font-weight: normal;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 150%;
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  background-position: 27px -1px;
+  background-image: url("./../../assets/images/icons/rating.svg");
+  background-repeat: no-repeat;
 }
 
-.card-link {
-  color: #fff;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 150%;
-  text-shadow: 0px 2px 4px rgba(67, 186, 255, 0.55);
-}
-
-.character {
-  font-weight: 500;
-  font-size: 18.57px;
-  line-height: 1.43;
-}
-
-.card-characters {
-  background: linear-gradient(
-    115.33deg,
-    rgba(209, 209, 209, 0.5) -8.48%,
-    rgba(188, 188, 188, 0.05) 130.76%
-  );
-  backdrop-filter: blur(10px);
+.slider-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }

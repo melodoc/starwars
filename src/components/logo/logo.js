@@ -1,17 +1,16 @@
-import React from 'react';
-import logo from './../../assets/images/icons/star-wars.svg';
+import React from "react";
+import logo from './../../assets/images/icons/logo.png'
+import "./logo.css";
 
-import './logo.css';
-
-export const Logo = () => {
+export const  Logo= () => {
   return (
-    <a href=".">
+    <a href="index.html">
       <img
         className="menu-header-logo"
         src={logo}
-        alt="Star wars logo"
+        alt="Логотип киноэпопеи «Звездные войны»"
         width="135"
-        height="58"
+        height="40"
       />
     </a>
   );
