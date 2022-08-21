@@ -27,3 +27,15 @@
   padding-right: 0;
   background-color: transparent;
 }
+
+@media (max-width: 900px) {
+  .starship-paragraph {
+    margin: 0;
+    display: flex;
+  }
+
+  .starship-description {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
