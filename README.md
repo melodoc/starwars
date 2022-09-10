@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a simple project about star wars. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple project about star wars heroes. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Technologies in the project
 
@@ -46,3 +46,4 @@ Made by melodoc
 
 - redesign tables
 - add loading state
+
