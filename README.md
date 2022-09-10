@@ -1,19 +1,48 @@
-# starwars
+# Project: Star Wars
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Link
 
-[Deployed by github-pages.](https://melodoc.github.io/starwars/index.html)
+[Star Wars](https://melodoc.github.io/starwars/)
 
-# API
+## Description
+
+This is a simple project about star wars. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technologies in the project
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ffd24a?style=for-the-badge&logo=javascript&logoColor=white) ![React](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
+
+## Used API
 
 https://www.swapi.tech/documentation
 
-## Available Scripts
+## How to install
 
-`npm start`
+``` shell
+npm install
+```
 
-Runs the app in the development mode on [http://localhost:3000](http://localhost:3000) in the browser.
+## How to run application
 
-`npm run build`
+``` shell
+npm start
+```
 
-Builds the app for production to the `build` folder. [About deployment](https://facebook.github.io/create-react-app/docs/deployment).
+Star Wars application will boot op on http://localhost:3000.
+
+## Build application
+
+``` shell
+npm run build
+```
+
+This will create a dist folder with compiled and minimised components.
+
+## The authors
+
+Made by melodoc
+
+## Feature plans
+
+- redesign tables
+- add loading state
