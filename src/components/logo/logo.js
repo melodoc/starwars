@@ -10,8 +10,6 @@ export const Logo = () => {
         className="menu-header-logo"
         src={logo}
         alt="Star wars logo"
-        width="135"
-        height="58"
       />
     </a>
   );
