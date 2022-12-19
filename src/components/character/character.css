@@ -91,11 +91,3 @@
   );
   backdrop-filter: blur(10px);
 }
-
-.swiper-button-next {
-background-color: #fff;
-}
-.swiper-button-prev {
-  background-color: #fff;
-
-}

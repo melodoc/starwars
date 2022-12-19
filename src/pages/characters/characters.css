@@ -1,4 +1,41 @@
 .characters {
   display: flex;
   flex-wrap: wrap;
+  /* width: 100vw;
+  position: fixed;
+  left: 0; */
+}
+
+.characters-loader {
+  min-height: 300px;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: transparent;
+  color: #b02000;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b02000;
+}
+
+.swiper-pagination-bullet {
+  background-color: #b02000;
+}
+
+.swiper-button-prev {
+  left: 0px;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -2px;
 }

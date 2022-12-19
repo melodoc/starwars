@@ -7,8 +7,8 @@ import './detailed-card.css';
 
 const TableRow = ({ label, value }) => {
   return (
-    <tr>
-      <td className="character-row">{label}</td>
+    <tr className='character-row-container'>
+      <td className="character-row character-row-label">{label}</td>
       <td className="character-row">{value}</td>
     </tr>
   );

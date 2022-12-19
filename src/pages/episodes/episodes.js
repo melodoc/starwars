@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Card } from '../../components/card';
+import { Loader } from '../../components/loader';
 import { InfoPanel } from '../../components/info-panel/info-panel';
 import { CardsEnum } from '../../constants';
 import { api } from '../../api';
@@ -16,6 +17,7 @@ export const Episodes = () => {
       .getFilmsList()
       .then((data) => {
         setFilms(data.result);
+        setCurrentFilm(data.result[0]);
       })
       .catch((err) => {
         console.error(err);
@@ -31,24 +33,26 @@ export const Episodes = () => {
     <>
       <InfoPanel currentFilm={currentFilm} />
       <article className="card">
-        {films
-          ? films.map((film) => {
-              return (
-                <Card
-                  key={film._id}
-                  type={CardsEnum.MOVIE}
-                  card={{
-                    id: film._id,
-                    releaseDate: film.properties.release_date,
-                    description: film.properties.opening_crawl,
-                    title: film.properties.title,
-                    episode: film.properties.episode_id
-                  }}
-                  onClick={handleOnClick}
-                />
-              );
-            })
-          : 'Loading...'}
+        {films ? (
+          films.map((film) => {
+            return (
+              <Card
+                key={film._id}
+                type={CardsEnum.MOVIE}
+                card={{
+                  id: film._id,
+                  releaseDate: film.properties.release_date,
+                  description: film.properties.opening_crawl,
+                  title: film.properties.title,
+                  episode: film.properties.episode_id
+                }}
+                onClick={handleOnClick}
+              />
+            );
+          })
+        ) : (
+          <Loader />
+        )}
       </article>
     </>
   );

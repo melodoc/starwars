@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Card } from '../../components/card';
 import { DetailedCard } from '../../components/detailed-card';
+import { Loader } from '../../components/loader';
 import { api } from '../../api';
 import { CardsEnum, DetailedCardEnum } from '../../constants';
 
@@ -43,21 +44,23 @@ export const Planets = () => {
         />
       )}
       <article className="planets">
-        {planets
-          ? planets.map((planet) => {
-              return (
-                <Card
-                  key={planet.uid}
-                  type={CardsEnum.CHARACTERS}
-                  card={{
-                    id: planet.uid,
-                    description: planet.name
-                  }}
-                  onClick={handleOnClick}
-                />
-              );
-            })
-          : 'Loading...'}
+        {planets ? (
+          planets.map((planet) => {
+            return (
+              <Card
+                key={planet.uid}
+                type={CardsEnum.CHARACTERS}
+                card={{
+                  id: planet.uid,
+                  description: planet.name
+                }}
+                onClick={handleOnClick}
+              />
+            );
+          })
+        ) : (
+          <Loader />
+        )}
       </article>
     </>
   );
