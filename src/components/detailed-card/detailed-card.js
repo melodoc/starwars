@@ -7,7 +7,7 @@ import './detailed-card.css';
 
 const TableRow = ({ label, value }) => {
   return (
-    <tr className='character-row-container'>
+    <tr className="character-row-container">
       <td className="character-row character-row-label">{label}</td>
       <td className="character-row">{value}</td>
     </tr>
@@ -42,16 +42,16 @@ export const DetailedCard = ({ currentCardItem, type }) => {
       <div className="character-table-grid">
         <table className="character-table">
           <tbody>
-            {characters.map((character, index) => (
+            {characters.map((character) => (
               <TableRow
-                key={`table_row_characters_${index}`}
+                key={character.label}
                 label={character.label}
                 value={character.value}
               />
             ))}
           </tbody>
         </table>
-        <img className="character-table-image" src={image.default} alt={cardItem.name} />
+        <img className="character-table-image" src={image} alt={cardItem.name} />
       </div>
     </div>
   ) : (
@@ -59,9 +59,9 @@ export const DetailedCard = ({ currentCardItem, type }) => {
       <h2 className="character-card-title">Info about {cardItem.name}</h2>
       <table className="character-table">
         <tbody>
-          {planets.map((character, index) => (
+          {planets.map((character) => (
             <TableRow
-              key={`table_row_planets_${index}`}
+              key={character.label}
               label={character.label}
               value={character.value}
             />

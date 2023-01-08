@@ -10,14 +10,19 @@ export const Card = ({ type, card, onClick }) => {
 
   const handleOnClick = () => {
     onClick(id);
+    setDetailsVisibility(false);
   };
 
   const handleLinkClick = (e) => {
     e.preventDefault();
   };
 
-  const handleMouseEvent = () => {
-    setDetailsVisibility(!detailsVisibility);
+  const handleMouseEnter = () => {
+    setDetailsVisibility(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDetailsVisibility(false);
   };
 
   return type === CardsEnum.MOVIE ? (
@@ -34,8 +39,8 @@ export const Card = ({ type, card, onClick }) => {
     <div
       className="card-item card-characters"
       onClick={handleOnClick}
-      onMouseEnter={handleMouseEvent}
-      onMouseLeave={handleMouseEvent}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <time className="card-year content" dateTime={releaseDate}>
         {releaseDate}
