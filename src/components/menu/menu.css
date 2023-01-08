@@ -17,13 +17,11 @@
 
 .menu-nav .menu-link {
   margin-right: 12px;
-
   text-decoration: none;
   color: #fb641a;
 }
 
-.menu-nav .menu-link:hover,
-.menu-nav .menu-link:focus {
+.menu-nav .menu-link:hover {
   text-decoration: underline;
 }
 
@@ -36,7 +34,6 @@
     display: -ms-grid;
     display: grid;
     margin-right: 0x;
-
     font-size: 14px;
   }
 }

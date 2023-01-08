@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Card } from '../../components/card';
 import { DetailedCard } from '../../components/detailed-card';
 import { Loader } from '../../components/loader';
@@ -11,6 +12,7 @@ import './planets.css';
 export const Planets = () => {
   const [planets, setPlanets] = useState(null);
   const [currentPlanet, setCurrentPlanet] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     api
@@ -24,6 +26,7 @@ export const Planets = () => {
   }, []);
 
   const handleOnClick = (id) => {
+    setIsLoading(true);
     api
       .getPlanetById(id)
       .then((data) => {
@@ -31,33 +34,53 @@ export const Planets = () => {
       })
       .catch((err) => {
         console.error(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
   return (
     <>
       <h2 className="episode-select">Planets</h2>
-      {currentPlanet && currentPlanet?.properties && (
-        <DetailedCard
-          currentCardItem={currentPlanet?.properties}
-          type={DetailedCardEnum.PLANETS}
-        />
+      {isLoading ? (
+        <div className="characters-loader">
+          <Loader />
+        </div>
+      ) : (
+        currentPlanet &&
+        currentPlanet?.properties && (
+          <DetailedCard
+            currentCardItem={currentPlanet?.properties}
+            type={DetailedCardEnum.PLANETS}
+          />
+        )
       )}
       <article className="planets">
         {planets ? (
-          planets.map((planet) => {
-            return (
-              <Card
-                key={planet.uid}
-                type={CardsEnum.CHARACTERS}
-                card={{
-                  id: planet.uid,
-                  description: planet.name
-                }}
-                onClick={handleOnClick}
-              />
-            );
-          })
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={10}
+            slidesPerView={4}
+            navigation
+            pagination={{ clickable: true }}
+          >
+            {planets.map((planet) => {
+              return (
+                <SwiperSlide key={planet.uid}>
+                  <Card
+                    key={planet.uid}
+                    type={CardsEnum.CHARACTERS}
+                    card={{
+                      id: planet.uid,
+                      description: planet.name
+                    }}
+                    onClick={handleOnClick}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         ) : (
           <Loader />
         )}

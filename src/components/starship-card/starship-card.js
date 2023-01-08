@@ -28,7 +28,11 @@ export const StarshipCard = ({ card }) => {
       <h2 className="starship-card-header">About {card.name}</h2>
       <div className="starship-card-container">
         {starshipCards.map((starshipCard) => (
-          <Paragraph label={starshipCard.label} value={starshipCard.value} />
+          <Paragraph
+            key={starshipCard.label}
+            label={starshipCard.label}
+            value={starshipCard.value}
+          />
         ))}
       </div>
     </>

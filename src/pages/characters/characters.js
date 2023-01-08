@@ -7,8 +7,6 @@ import { Loader } from '../../components/loader';
 import { api } from '../../api';
 import { CardsEnum, DetailedCardEnum } from '../../constants';
 
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
 import './characters.css';
 
 export const Characters = () => {
@@ -17,29 +15,28 @@ export const Characters = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    api
-      .getCharactersList()
-      .then((data) => {
-        setCharacters(data.results);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    loadData();
   }, []);
 
-  const handleOnClick = (id) => {
+  const loadData = async () => {
+    try {
+      const data = await api.getCharactersList();
+      setCharacters(data.results);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleOnClick = async (id) => {
     setIsLoading(true);
-    api
-      .getCharacterById(id)
-      .then((data) => {
-        setCurrentCharacter(data.result);
-      })
-      .catch((err) => {
-        console.error(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    try {
+      const data = await api.getCharacterById(id);
+      setCurrentCharacter(data.result);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -66,14 +63,11 @@ export const Characters = () => {
             slidesPerView={4}
             navigation
             pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
           >
             {characters.map((character) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={character.uid}>
                   <Character
-                    key={character.uid}
                     type={CardsEnum.CHARACTERS}
                     character={{
                       id: character.uid,

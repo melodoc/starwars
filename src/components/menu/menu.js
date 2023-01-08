@@ -22,8 +22,8 @@ export const Menu = () => {
 
   return (
     <ul className="menu-nav">
-      {links.map((link, index) => (
-        <li key={`${index}${link.tab}`}>
+      {links.map((link) => (
+        <li key={`${link.tab}`}>
           <a className="menu-link" href="." onClick={handleLinkClick} id={link.tab}>
             {link.name}
           </a>
