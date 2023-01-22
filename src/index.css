@@ -11,29 +11,11 @@
   box-sizing: border-box;
 }
 
-.body {
+body {
   font-family: 'Montserrat', 'Arial', sans-serif;
-  color: #ffffff;
-  background: top right no-repeat;
   background-color: #010101;
-  background-image: url('./assets/images/background/main-bg.jpg');
-  background-attachment: fixed;
-  background-size: contain;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.container {
-  max-width: 875px;
-  width: 80%;
-  margin: auto;
-  padding: 91px 0 0 0;
-}
-
-@media (max-width: 900px) {
-  .container {
-    max-width: 80%;
-  }
 }

@@ -1,5 +1,5 @@
 .card-item {
-  position: relative;
+  position: sticky;
   cursor: pointer;
 
   width: 206.25px;
@@ -77,25 +77,9 @@
   text-shadow: 0px 2px 4px rgba(67, 186, 255, 0.55);
 }
 
-.character {
-  font-weight: 500;
-  font-size: 18.57px;
-  line-height: 1.43;
-}
-
-.card-characters {
-  background: linear-gradient(
-    115.33deg,
-    rgba(209, 209, 209, 0.5) -8.48%,
-    rgba(188, 188, 188, 0.05) 130.76%
-  );
-  backdrop-filter: blur(10px);
-}
-
 .swiper-button-next {
 background-color: #fff;
 }
 .swiper-button-prev {
   background-color: #fff;
-
 }
