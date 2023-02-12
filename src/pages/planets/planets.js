@@ -52,7 +52,7 @@ export const Planets = () => {
         currentPlanet &&
         currentPlanet?.properties && (
           <DetailedCard
-            currentCardItem={currentPlanet?.properties}
+            currentCard={currentPlanet?.properties}
             type={DetailedCardEnum.PLANETS}
           />
         )

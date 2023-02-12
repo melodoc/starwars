@@ -52,7 +52,7 @@ export const Characters = () => {
         currentCharacter &&
         currentCharacter?.properties && (
           <DetailedCard
-            currentCardItem={currentCharacter?.properties}
+            currentCard={currentCharacter?.properties}
             type={DetailedCardEnum.CHARACTERS}
           />
         )

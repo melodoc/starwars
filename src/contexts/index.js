@@ -1,1 +1,1 @@
-export * from './CurrentTabContext';
+export * from './current-tab-context';
