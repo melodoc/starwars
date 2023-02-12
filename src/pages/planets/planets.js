@@ -15,29 +15,30 @@ export const Planets = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    StarWarsApiService
-      .getPlanetList()
-      .then((data) => {
-        setPlanets(data.results);
-      })
-      .catch((err) => {
+    let mounted = true;
+    (async () => {
+      try {
+        const data = await StarWarsApiService.getPlanetList();
+        if (mounted) {
+          setPlanets(data.results);
+        }
+      } catch (err) {
         console.error(err);
-      });
+      }
+    })();
+    return () => (mounted = false);
   }, []);
 
-  const handleOnClick = (id) => {
+  const handleOnClick = async (id) => {
     setIsLoading(true);
-    StarWarsApiService
-      .getPlanetById(id)
-      .then((data) => {
-        setCurrentPlanet(data.result);
-      })
-      .catch((err) => {
-        console.error(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    try {
+      const data = await StarWarsApiService.getPlanetById(id);
+      setCurrentPlanet(data.result);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

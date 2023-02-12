@@ -15,17 +15,19 @@ export const Characters = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    loadData();
+    let mounted = true;
+    (async () => {
+      try {
+        const data = await StarWarsApiService.getCharactersList();
+        if (mounted) {
+          setCharacters(data.results);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    })();
+    return () => (mounted = false);
   }, []);
-
-  const loadData = async () => {
-    try {
-      const data = await StarWarsApiService.getCharactersList();
-      setCharacters(data.results);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   const handleOnClick = async (id) => {
     setIsLoading(true);

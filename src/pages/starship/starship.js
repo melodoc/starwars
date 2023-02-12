@@ -15,29 +15,31 @@ export const Starship = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    StarWarsApiService
-      .getStarshipList()
-      .then((data) => {
-        setStarship(data.results);
-      })
-      .catch((err) => {
+    let mounted = true;
+    (async () => {
+      try {
+        const data = await StarWarsApiService.getStarshipList();
+        if (mounted) {
+          setStarship(data.results);
+        }
+      } catch (err) {
         console.error(err);
-      });
-  }, []);
+      }
+    })();
 
-  const handleOnClick = (id) => {
+    return () => (mounted = false);
+  }, [isLoading]);
+
+  const handleOnClick = async (id) => {
     setIsLoading(true);
-    StarWarsApiService
-      .getStarshipById(id)
-      .then((data) => {
-        setCurrentStarship(data.result);
-      })
-      .catch((err) => {
-        console.error(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    try {
+      const data = await StarWarsApiService.getStarshipById(id);
+      setCurrentStarship(data.result);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

@@ -13,15 +13,19 @@ export const Episodes = () => {
   const [currentFilm, setCurrentFilm] = useState(null);
 
   useEffect(() => {
-    StarWarsApiService
-      .getFilmsList()
-      .then((data) => {
-        setFilms(data.result);
-        setCurrentFilm(data.result[0]);
-      })
-      .catch((err) => {
+    let mounted = true;
+    (async () => {
+      try {
+        const data = await StarWarsApiService.getFilmsList();
+        if (mounted) {
+          setFilms(data.result);
+          setCurrentFilm(data.result[0]);
+        }
+      } catch (err) {
         console.error(err);
-      });
+      }
+    })();
+    return () => (mounted = false);
   }, []);
 
   const handleOnClick = (id) => {
