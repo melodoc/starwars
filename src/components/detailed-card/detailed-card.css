@@ -26,8 +26,8 @@
 
 .character-table-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 225px;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: minmax(225px, auto);
   grid-gap: 40px;
   padding-bottom: 30px;
 }
