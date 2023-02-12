@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { TabsEnum } from '../../constants';
+import { TabsEnum } from '../../enums';
 import { CurrentTabContext } from '../../contexts';
 
 import './menu.css';

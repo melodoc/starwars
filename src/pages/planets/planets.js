@@ -4,8 +4,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Card } from '../../components/card';
 import { DetailedCard } from '../../components/detailed-card';
 import { Loader } from '../../components/loader';
-import { api } from '../../api';
-import { CardsEnum, DetailedCardEnum } from '../../constants';
+import { StarWarsApiService } from '../../api';
+import { CardsEnum, DetailedCardEnum } from '../../enums';
 
 import './planets.css';
 
@@ -15,29 +15,30 @@ export const Planets = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    api
-      .getPlanetList()
-      .then((data) => {
-        setPlanets(data.results);
-      })
-      .catch((err) => {
+    let mounted = true;
+    (async () => {
+      try {
+        const data = await StarWarsApiService.getPlanetList();
+        if (mounted) {
+          setPlanets(data.results);
+        }
+      } catch (err) {
         console.error(err);
-      });
+      }
+    })();
+    return () => (mounted = false);
   }, []);
 
-  const handleOnClick = (id) => {
+  const handleOnClick = async (id) => {
     setIsLoading(true);
-    api
-      .getPlanetById(id)
-      .then((data) => {
-        setCurrentPlanet(data.result);
-      })
-      .catch((err) => {
-        console.error(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    try {
+      const data = await StarWarsApiService.getPlanetById(id);
+      setCurrentPlanet(data.result);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

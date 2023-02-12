@@ -4,8 +4,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Card } from '../../components/card';
 import { StarshipCard } from '../../components/starship-card';
 import { Loader } from '../../components/loader';
-import { api } from '../../api';
-import { CardsEnum } from '../../constants';
+import { StarWarsApiService } from '../../api';
+import { CardsEnum } from '../../enums';
 
 import './starship.css';
 
@@ -15,29 +15,31 @@ export const Starship = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    api
-      .getStarshipList()
-      .then((data) => {
-        setStarship(data.results);
-      })
-      .catch((err) => {
+    let mounted = true;
+    (async () => {
+      try {
+        const data = await StarWarsApiService.getStarshipList();
+        if (mounted) {
+          setStarship(data.results);
+        }
+      } catch (err) {
         console.error(err);
-      });
-  }, []);
+      }
+    })();
 
-  const handleOnClick = (id) => {
+    return () => (mounted = false);
+  }, [isLoading]);
+
+  const handleOnClick = async (id) => {
     setIsLoading(true);
-    api
-      .getStarshipById(id)
-      .then((data) => {
-        setCurrentStarship(data.result);
-      })
-      .catch((err) => {
-        console.error(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    try {
+      const data = await StarWarsApiService.getStarshipById(id);
+      setCurrentStarship(data.result);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

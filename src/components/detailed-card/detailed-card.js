@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DetailedCardEnum } from '../../constants';
+import { DetailedCardEnum } from '../../enums';
 import { getCardItemProps, getImgLink } from './utils';
 
 import './detailed-card.css';
