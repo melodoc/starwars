@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/starwars/static/css/main.f35a36fc.css",
-    "main.js": "/starwars/static/js/main.7209180e.js",
+    "main.js": "/starwars/static/js/main.30551c98.js",
     "static/js/787.e73623cf.chunk.js": "/starwars/static/js/787.e73623cf.chunk.js",
     "static/media/main-bg.jpg": "/starwars/static/media/main-bg.86e040e8439f7c823c7a.jpg",
     "static/media/obi_wan_kenobi.png": "/starwars/static/media/obi_wan_kenobi.75de10a4ea94ad7808a6.png",
@@ -18,11 +18,11 @@
     "static/media/star-wars.svg": "/starwars/static/media/star-wars.5fa9c7718c936ffa52abbb3bbeac7c3e.svg",
     "index.html": "/starwars/index.html",
     "main.f35a36fc.css.map": "/starwars/static/css/main.f35a36fc.css.map",
-    "main.7209180e.js.map": "/starwars/static/js/main.7209180e.js.map",
+    "main.30551c98.js.map": "/starwars/static/js/main.30551c98.js.map",
     "787.e73623cf.chunk.js.map": "/starwars/static/js/787.e73623cf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f35a36fc.css",
-    "static/js/main.7209180e.js"
+    "static/js/main.30551c98.js"
   ]
 }
