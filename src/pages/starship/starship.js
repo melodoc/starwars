@@ -4,8 +4,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Card } from '../../components/card';
 import { StarshipCard } from '../../components/starship-card';
 import { Loader } from '../../components/loader';
-import { api } from '../../api';
-import { CardsEnum } from '../../constants';
+import { StarWarsApiService } from '../../api';
+import { CardsEnum } from '../../enums';
 
 import './starship.css';
 
@@ -15,7 +15,7 @@ export const Starship = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    api
+    StarWarsApiService
       .getStarshipList()
       .then((data) => {
         setStarship(data.results);
@@ -27,7 +27,7 @@ export const Starship = () => {
 
   const handleOnClick = (id) => {
     setIsLoading(true);
-    api
+    StarWarsApiService
       .getStarshipById(id)
       .then((data) => {
         setCurrentStarship(data.result);

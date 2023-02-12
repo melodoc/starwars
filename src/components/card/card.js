@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { CardsEnum } from '../../constants';
+import { CardsEnum } from '../../enums';
 
 import './card.css';
 

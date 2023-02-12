@@ -4,8 +4,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Character } from '../../components/character';
 import { DetailedCard } from '../../components/detailed-card';
 import { Loader } from '../../components/loader';
-import { api } from '../../api';
-import { CardsEnum, DetailedCardEnum } from '../../constants';
+import { StarWarsApiService } from '../../api';
+import { CardsEnum, DetailedCardEnum } from '../../enums';
 
 import './characters.css';
 
@@ -20,7 +20,7 @@ export const Characters = () => {
 
   const loadData = async () => {
     try {
-      const data = await api.getCharactersList();
+      const data = await StarWarsApiService.getCharactersList();
       setCharacters(data.results);
     } catch (err) {
       console.error(err);
@@ -30,7 +30,7 @@ export const Characters = () => {
   const handleOnClick = async (id) => {
     setIsLoading(true);
     try {
-      const data = await api.getCharacterById(id);
+      const data = await StarWarsApiService.getCharacterById(id);
       setCurrentCharacter(data.result);
     } catch (err) {
       console.error(err);

@@ -1,4 +1,4 @@
-import { DetailedCardEnum } from '../../../constants';
+import { DetailedCardEnum } from '../../../enums';
 
 export const getCardItemProps = (props, type) => {
   return type === DetailedCardEnum.CHARACTERS

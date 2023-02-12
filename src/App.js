@@ -5,7 +5,7 @@ import { Planets } from './pages/planets';
 import { Starship } from './pages/starship';
 import { Header } from './components/header';
 import { CurrentTabContext } from './contexts';
-import { TabsEnum } from './constants';
+import { TabsEnum } from './enums';
 
 import './App.css';
 

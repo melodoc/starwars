@@ -4,8 +4,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Card } from '../../components/card';
 import { DetailedCard } from '../../components/detailed-card';
 import { Loader } from '../../components/loader';
-import { api } from '../../api';
-import { CardsEnum, DetailedCardEnum } from '../../constants';
+import { StarWarsApiService } from '../../api';
+import { CardsEnum, DetailedCardEnum } from '../../enums';
 
 import './planets.css';
 
@@ -15,7 +15,7 @@ export const Planets = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    api
+    StarWarsApiService
       .getPlanetList()
       .then((data) => {
         setPlanets(data.results);
@@ -27,7 +27,7 @@ export const Planets = () => {
 
   const handleOnClick = (id) => {
     setIsLoading(true);
-    api
+    StarWarsApiService
       .getPlanetById(id)
       .then((data) => {
         setCurrentPlanet(data.result);
